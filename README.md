@@ -8,6 +8,9 @@ The latest source code is available here: <http://github.com/tmk/tmk_keyboard>
 Updates
 -------
 #### 2016/06/26
+Deleted all the files that are unnecessary for me. Only gh60 keyboard was keeped.
+
+#### 2016/06/26
 Keymap framework was updated. `fn_actions[]` should be defined as `action_t` instead of `uint16_t`. And default code for keymap handling is now included in core you just need define `uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS]` and `action_t fn_actions[]`.
 
 
