@@ -17,6 +17,12 @@ ledmap_t ledmap_get_code(uint8_t index)
     return (ledmap_t) { .code = pgm_read_word(&ledmaps[index]) };
 }
 
+/* LED pin configration
+ *   CapsLock:  PB2
+ *   LED1:      PF7
+ *   LED2:      PF6
+ *   Fn:        PF5
+ */
 void ledmap_led_init(void)
 {
     DDRB  |= (1<<PB2);

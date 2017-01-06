@@ -16,10 +16,10 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     /* 1: Fn Layer */
     KEYMAP_ANSI(
          GRV,   F1,   F2,   F3,   F4,   F5,  F11,  FN1, TRNS,   F6,   F7,   F8,   F9,  F10,  INS, \
-         FN9, BTN1, MS_U, BTN2, WH_U, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PAUS, TRNS, \
+         FN9, BTN1, MS_U, BTN2, WH_U, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PAUS, SLCK, PSCR, TRNS, \
         TRNS, MS_L, MS_D, MS_R, WH_D, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS,  FN4,  FN3,  FN5, TRNS, TRNS, SLCK, TRNS,  FN7,  FN6,  FN8, TRNS, VOLU,  FN0, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PSCR,  FN2, TRNS, TRNS, TRNS, MUTE, VOLD, TRNS  ),
+        TRNS, TRNS,  FN4,  FN3,  FN5, TRNS, TRNS, TRNS, TRNS,  FN7,  FN6,  FN8, TRNS, VOLU,  FN0, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, FN10,  FN2, TRNS, TRNS, TRNS, MUTE, VOLD, TRNS  ),
     /* 2: Num Layer */
     KEYMAP_ANSI(
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,  FN1, TRNS, NLCK, PSLS, PAST, PMNS, CALC, TRNS, \
@@ -29,11 +29,11 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS ,TRNS,   P0, TRNS, TRNS, TRNS, TRNS  ),
     /* 3:  */
     KEYMAP_ANSI(
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, BSPC, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS  ),
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,    Y, TRNS, RALT, TRNS, TRNS, TRNS, TRNS  ),
     /* 4:  */
     KEYMAP_ANSI(
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
@@ -126,7 +126,6 @@ const uint16_t fn_actions[FN_ACTIONS_COUNT] __attribute__ ((section (".keymap.fn
 #else
 const uint16_t fn_actions[] PROGMEM = {
 #endif
-    /* Poker Layout */
     [0] = ACTION_LAYER_MOMENTARY(1),                       // to Fn overlay
     [1] = ACTION_LAYER_TOGGLE(2),                          // Num Lay TOGGLE
     [2] = ACTION_MODS_KEY(MOD_RCTL|MOD_RSFT, KC_ESC),      // Task(RControl,RShift+Esc)
@@ -137,7 +136,7 @@ const uint16_t fn_actions[] PROGMEM = {
     [7] = ACTION_FUNCTION(AF_RGB_DECREASE),                // RGB -
     [8] = ACTION_FUNCTION(AF_RGB_INCREASE),                // RGB +
     [9] = ACTION_MACRO(MACRO_0),                           // MACRO 8343747@qq.com
-
+    [10] = ACTION_LAYER_TOGGLE(3),                         // dnf Lay TOGGLE
 };
 
 #ifdef KEYMAP_IN_EEPROM_ENABLE

@@ -8,32 +8,32 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 #endif
     /* 0: Default Layer */
     KEYMAP_ANSI(
-         ESC,    1,    2,    3,    4,    5,  GRV,  F12, HOME,    6,    7,    8,    9,    0,  DEL, \
-         TAB,    Q,    W,    E,    R,    T, LBRC, RBRC, PGUP,    Y,    U,    I,    O,    P,  ENT, \
-        TRNS,    A,    S,    D,    F,    G, SCLN, QUOT, PGDN,    H,    J,    K,    L, MINS, TRNS, \
-        COMM,  DOT,    Z,    X,    C,    V, SLSH, BSLS,  END,    B,    N,    M,  EQL,   UP,  FN0, \
-        LCTL, LGUI, LALT, TRNS, LSFT, TRNS,  SPC, RSFT, BSPC, TRNS, CAPS, TRNS, LEFT, DOWN, RGHT  ),
+                ESC,   1,    2,     3,    4,     5,     6,     7,    8,     9,     0,     MINS,  EQL,   BSPC,   DELETE,\
+                NUHS,  Q,    W,     E,    R,     T,     Y,     U,    I,     O,     P,     LBRC,  RBRC,  BSLS,   F12,   \
+                TAB,   A,    S,     D,    F,     G,     H,     J,    K,     L,     SCLN,  QUOT,  PGUP,  PGDOWN, HOME,  \
+                LSFT,  Z,    X,     C,    V,     B,     N,     M,    COMMA, DOT,   SLSH,  RSFT,  CAPS,  UP,     END,   \
+                LCTL, LGUI,  LALT,  TRNS, SPC,   TRNS,  ENT,   TRNS, FN0,   TRNS,  FN1,   TRNS,  LEFT,  DOWN,   RGHT   ),
     /* 1: Fn Layer */
     KEYMAP_ANSI(
-         GRV,   F1,   F2,   F3,   F4,   F5,  F11,  FN1, TRNS,   F6,   F7,   F8,   F9,  F10,  INS, \
-         FN9, BTN1, MS_U, BTN2, WH_U, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PAUS, SLCK, PSCR, TRNS, \
-        TRNS, MS_L, MS_D, MS_R, WH_D, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS,  FN4,  FN3,  FN5, TRNS, TRNS, TRNS, TRNS,  FN7,  FN6,  FN8, TRNS, VOLU,  FN0, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, FN10,  FN2, TRNS, TRNS, TRNS, MUTE, VOLD, TRNS  ),
-    /* 2: Num Layer */
+                MUTE,   F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,   F11,   F12,  MYCM, WSCH,\
+                VOLU,   TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  FN5,   FN2,   MPLY,  TRNS,  TRNS,  TRNS,  P7,   P8,   P9,  \
+                VOLD,   TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  FN6,   FN3,   MPRV,  TRNS,  TRNS,  TRNS,  P4,   P5,   P6,  \
+                FN8,    TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  FN7,   FN4,   MNXT,  TRNS,  TRNS,  TRNS,  P1,   P2,   P3,  \
+                FN9,    TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS, P0,   PDOT ),
+    /* 2:  */
     KEYMAP_ANSI(
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,  FN1, TRNS, NLCK, PSLS, PAST, PMNS, CALC, TRNS, \
-        TRNS, TRNS,   UP, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   P7,   P8,   P9, PPLS, TRNS, PENT, \
-        TRNS, LEFT, DOWN, RGHT, TRNS, TRNS, TRNS, TRNS, TRNS,   P4,   P5,   P6, TRNS, TRNS, TRNS, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,   P1,   P2,   P3, PDOT, TRNS,  FN0, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS ,TRNS,   P0, TRNS, TRNS, TRNS, TRNS  ),
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS  ),
     /* 3:  */
     KEYMAP_ANSI(
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, BSPC, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,    Y, TRNS, RALT, TRNS, TRNS, TRNS, TRNS  ),
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS  ),
     /* 4:  */
     KEYMAP_ANSI(
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
@@ -87,36 +87,36 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
     switch (id) {
         case MACRO_0:
             return (event.pressed ?
-                    MACRO( T(8), T(3), T(4), T(3), T(7), T(4), T(7), D(LSFT), T(2), U(LSFT), T(Q), T(Q), T(DOT), T(C), T(O), T(M), W(100), END ) :
-                    MACRO( END ));
+             MACRO( T(8), T(3), T(4), T(3), T(7), T(4), T(7), D(LSFT), T(2), U(LSFT), T(Q), T(Q), T(DOT), T(C), T(O), T(M), W(100), END ) :
+             MACRO( END ));
         case MACRO_1:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( D(LSFT), T(Z),D(LSFT), T(L), T(5), T(3), T(2), T(2), T(2), T(0), T(4), W(100), END ) :
+             MACRO( END ));
         case MACRO_2:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( D(LSFT), T(Z),D(LSFT), T(L), T(5), T(3), T(2), T(2), T(2), T(0), T(4), END ) :
+             MACRO( END ));
         case MACRO_3:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( END ) :
+             MACRO( END ));
         case MACRO_4:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( END ) :
+             MACRO( END ));
         case MACRO_5:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( END ) :
+             MACRO( END ));
         case MACRO_6:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( END ) :
+             MACRO( END ));
         case MACRO_7:
             return (event.pressed ?
-                    MACRO( END ) :
-                    MACRO( END ));
+             MACRO( END ) :
+             MACRO( END ));
     }
     return MACRO_NONE;
 }
@@ -126,19 +126,16 @@ const uint16_t fn_actions[FN_ACTIONS_COUNT] __attribute__ ((section (".keymap.fn
 #else
 const uint16_t fn_actions[] PROGMEM = {
 #endif
-    /* Poker Layout */
-    [0] = ACTION_LAYER_MOMENTARY(1),                       // to Fn overlay
-    [1] = ACTION_LAYER_TOGGLE(2),                          // Num Lay TOGGLE
-    [2] = ACTION_MODS_KEY(MOD_RCTL|MOD_RSFT, KC_ESC),      // Task(RControl,RShift+Esc)
-    [3] = ACTION_BACKLIGHT_TOGGLE(),                       // BackLight TOGGLE
-    [4] = ACTION_BACKLIGHT_DECREASE(),                     // BackLight -
-    [5] = ACTION_BACKLIGHT_INCREASE(),                     // BackLight +
-    [6] = ACTION_FUNCTION(AF_RGB_TOGGLE),                  // RGB TOGGLE
-    [7] = ACTION_FUNCTION(AF_RGB_DECREASE),                // RGB -
-    [8] = ACTION_FUNCTION(AF_RGB_INCREASE),                // RGB +
-    [9] = ACTION_MACRO(MACRO_0),                           // MACRO 8343747@qq.com
-    [10] = ACTION_LAYER_TOGGLE(3),                         // dnf Lay TOGGLE
-
+    [0] = ACTION_LAYER_MOMENTARY(1),                // to Fn overlay
+    [1] = ACTION_BACKLIGHT_TOGGLE(),                // BackLight TOGGLE 
+    [2] = ACTION_BACKLIGHT_DECREASE(),              // BackLight -      
+    [3] = ACTION_BACKLIGHT_INCREASE(),              // BackLight +      
+    [4] = ACTION_FUNCTION(AF_RGB_TOGGLE),           // RGB TOGGLE       
+    [5] = ACTION_FUNCTION(AF_RGB_DECREASE),         // RGB -            
+    [6] = ACTION_FUNCTION(AF_RGB_INCREASE),         // RGB +
+    [7] = ACTION_MACRO(MACRO_1),
+    [8] = ACTION_MACRO(MACRO_2),
+    [9] = ACTION_LAYER_MOMENTARY(1),                // to Fn overlay
 };
 
 #ifdef KEYMAP_IN_EEPROM_ENABLE
@@ -156,17 +153,17 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
     if (record->event.pressed) {
         switch (id) {
             case AF_RGB_TOGGLE:
-                rgb_toggle();
-                break;
+         rgb_toggle();
+         break;
             case AF_RGB_DECREASE:
-                rgb_decrease();
-                break;
+         rgb_decrease();
+         break;
             case AF_RGB_INCREASE:
-                rgb_increase();
-                break;
+         rgb_increase();
+         break;
             case AF_RGB_STEP:
-                rgb_step();
-                break;
+         rgb_step();
+         break;
         }
     }
 }

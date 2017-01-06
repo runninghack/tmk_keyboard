@@ -1,14 +1,3 @@
-/*
-* light weight WS2812 lib V2.0b
-*
-* Controls WS2811/WS2812/WS2812B RGB-LEDs
-* Author: Tim (cpldcpu@gmail.com)
-*
-* Jan 18th, 2014  v2.0b Initial Version
-*
-* License: GNU GPL v2 (see License.txt)
-*/
-
 #include "light_ws2812.h"
 #include <avr/interrupt.h>
 #include <avr/io.h>
