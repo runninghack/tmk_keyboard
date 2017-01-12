@@ -17,10 +17,10 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      */
     [0] = KEYMAP(
         ESC, TAB, F5,  BSPC, \
-        P7,  P8,  P9,  PPLS, \
-        P4,  P5,  P6,  PMNS, \
-        P1,  P2,  P3,  PAST, \
-        P0,  COMM,PDOT,ENT)
+        7,  8,  9,  PPLS, \
+        4,  5,  6,  PMNS, \
+        1,  2,  3,  PAST, \
+        0,  COMM,DOT,ENT)
 };
 
 const action_t PROGMEM fn_actions[] = {};
