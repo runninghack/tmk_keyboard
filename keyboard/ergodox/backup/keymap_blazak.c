@@ -114,12 +114,12 @@ enum function_id {
 /*
  * Fn action definition
  */
-const uint16_t PROGMEM fn_actions[] = {
-    ACTION_FUNCTION(TEENSY_KEY),                    // FN0 - Teensy key
-    ACTION_LAYER_MOMENTARY(1),                      // FN1 - switch to Layer1
-    ACTION_LAYER_SET(2, ON_PRESS),                  // FN2 - set Layer2
-    ACTION_LAYER_TOGGLE(3),                         // FN3 - toggle Layer3 aka Numpad layer
-    ACTION_LAYER_SET(0, ON_PRESS),                  // FN4 - set Layer0
+const action_t PROGMEM fn_actions[] = {
+    [0] = ACTION_FUNCTION(TEENSY_KEY),                    // FN0 - Teensy key
+    [1] = ACTION_LAYER_MOMENTARY(1),                      // FN1 - switch to Layer1
+    [2] = ACTION_LAYER_SET(2, ON_PRESS),                  // FN2 - set Layer2
+    [3] = ACTION_LAYER_TOGGLE(3),                         // FN3 - toggle Layer3 aka Numpad layer
+    [4] = ACTION_LAYER_SET(0, ON_PRESS),                  // FN4 - set Layer0
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)

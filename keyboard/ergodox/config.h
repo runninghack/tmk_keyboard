@@ -30,7 +30,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 #define PRODUCT_ID      0x1307
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    TMK/Cub
-#define PRODUCT         Ergodox
+#define PRODUCT         Ramiel's Ergodox
 #define DESCRIPTION     t.m.k. keyboard firmware for Ergodox
 
 #define MATRIX_ROWS 14
@@ -69,25 +69,5 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
     keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
 )
 
-
-
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */
-
-/* disable debug print */
-//#define NO_DEBUG
-
-/* disable print */
-//#define NO_PRINT
-
-/* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
-//#define DEBUG_MATRIX_SCAN_RATE
 
 #endif
