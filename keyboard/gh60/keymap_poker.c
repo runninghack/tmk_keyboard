@@ -90,7 +90,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,FN6, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),
 };
-const action_t PROGMEM fn_actions[] = {
+const uint16_t PROGMEM fn_actions[] = {
     /* Poker Layout */
     [0] = ACTION_LAYER_MOMENTARY(6),  // to Fn overlay
     [1] = ACTION_LAYER_TOGGLE(4),     // toggle arrow overlay
@@ -102,3 +102,13 @@ const action_t PROGMEM fn_actions[] = {
     [7] = ACTION_DEFAULT_LAYER_SET(2),  // set dvorak layout
     [8] = ACTION_DEFAULT_LAYER_SET(3),  // set workman layout
 };
+
+#ifdef KEYMAP_IN_EEPROM_ENABLE
+uint16_t keys_count(void) {
+    return sizeof(keymaps) / sizeof(keymaps[0]) * MATRIX_ROWS * MATRIX_COLS;
+}
+
+uint16_t fn_actions_count(void) {
+    return sizeof(fn_actions) / sizeof(fn_actions[0]);
+}
+#endif

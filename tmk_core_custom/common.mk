@@ -71,7 +71,7 @@ ifdef SLEEP_LED_ENABLE
 endif
 
 ifdef SOFTPWM_LED_ENABLE
-    SRC += $(COMMON_DIR)/softpwm_led.c
+    SRC += $(COMMON_DIR)/avr/softpwm_led.c
     OPT_DEFS += -DSOFTPWM_LED_ENABLE
 ifdef FADING_LED_ENABLE
     OPT_DEFS += -DFADING_LED_ENABLE
@@ -84,6 +84,14 @@ ifdef BREATHING_LED_ENABLE
     SRC += $(COMMON_DIR)/breathing_led.c
     OPT_DEFS += -DBREATHING_LED_ENABLE
 endif
+endif
+
+ifdef RGB_LED_ENABLE
+    SRC += $(COMMON_DIR)/avr/eeconfig.c
+    SRC += $(COMMON_DIR)/avr/light_ws2812.c
+    SRC += $(COMMON_DIR)/rgb_led.c
+    OPT_DEFS += -DRGB_LED_ENABLE
+    OPT_DEFS += -DRGB_LED_WS2812
 endif
 
 ifdef BACKLIGHT_ENABLE
@@ -116,6 +124,11 @@ ifdef KEYMAP_SECTION_ENABLE
     else
 	EXTRALDFLAGS = $(error no ldscript for keymap section)
     endif
+endif
+
+ifdef RAWHID_ENABLE
+    SRC += $(COMMON_DIR)/rawhid_command.c
+    OPT_DEFS += -DRAWHID_ENABLE
 endif
 
 # Version string
