@@ -2,14 +2,9 @@
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include "backlight.h"
-#ifdef SOFTPWM_LED_ENABLE
 #include "softpwm_led.h"
-#else
-#include "breathing_led.h"
-#endif
 #include "action.h"
 
-#ifdef BACKLIGHT_ENABLE
 
 void backlight_enable(void);
 void backlight_disable(void);
@@ -77,9 +72,6 @@ inline void backlight_set_raw(uint8_t raw)
     softpwm_led_set_all(raw);
 }
 
-
-#ifdef SOFTPWM_LED_ENABLE
-#ifdef FADING_LED_ENABLE
 void action_keyevent(keyevent_t event)
 {
     if (backlight_config.enable) {
@@ -97,26 +89,6 @@ void action_keyevent(keyevent_t event)
         }
     }
 }
-#endif
 
-#ifdef RGB_LED_ENABLE
-#ifdef CUSTOM_LED_ENABLE
-void softpwm_led_custom(void)
-{
-  
-}
 
-void fading_led_custom(uint8_t *value)
-{
-  
-}
 
-void breathing_led_custom(uint8_t *value)
-{
-  
-}
-#endif
-#endif
-#endif
-
-#endif

@@ -4,15 +4,15 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     /* 0: Default Layer */
     KEYMAP(
     		  TAB, Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P,    BSPC, \
-    		  ESC, A,    S,    D,    F,    G,    H,    J,    K,    L,    SCLN, QUOT, \
+    		  ESC, A,    S,    D,    F,    G,    H,    J,    K,    L,          QUOT, \
     		  LSFT, Z,    X,    C,    V,    B,    N,    M,    COMM, DOT,  SLSH, ENT, \
-    		  GRV, LCTL, LALT, LGUI, FN0,   SPC,  SPC,  FN1,   LEFT, DOWN, UP,   RGHT),
+    		  LCTL, LALT, LGUI,  SPC,                      FN0,   LEFT, DOWN, UP,   RGHT),
     /* 1: Lower Layer */
     KEYMAP(
     		0,       1,    2,    3,    4,    5,    6,    7,    8,    9,    0,    DEL, \
-		TRNS,    F1,   F2,   F3,   F4,   F5,   F6,   4,    5,    6,    TRNS, TRNS, \
+		TRNS,    F1,   F2,   F3,   F4,   F5,   F6,   4,    5,    6,          TRNS, \
     		TRNS,    F7,   F8,   F9,   F10,  F11,  F12,  1,    2,    3,    TRNS, TRNS, \
-		TRNS,    TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, MNXT, FN1, FN2, FN3),
+		TRNS,    TRNS, TRNS, TRNS,                       TRNS, MNXT, FN1, FN2, FN3),
 };
 
 
