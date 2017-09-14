@@ -36,8 +36,3 @@ uint16_t fn_actions_count(void) {
     return sizeof(fn_actions) / sizeof(fn_actions[0]);
 }
 #endif
-
-void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-    
-}
