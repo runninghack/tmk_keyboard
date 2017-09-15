@@ -5,6 +5,7 @@
 #include "keymap_common.h"
 
 
+
 const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     /* 0: Default Layer */
     KEYMAP(
@@ -21,9 +22,19 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 };
 
 
+
 const uint16_t fn_actions[] PROGMEM = {
     [0] = ACTION_LAYER_MOMENTARY(1),                // to Fn overlay
     [1] = ACTION_BACKLIGHT_TOGGLE(),                // BackLight TOGGLE 
     [2] = ACTION_BACKLIGHT_DECREASE(),              // BackLight -      
     [3] = ACTION_BACKLIGHT_INCREASE(),              // BackLight +      
 };
+
+uint16_t keys_count(void) {
+  return sizeof(keymaps) / sizeof(keymaps[0]) * MATRIX_ROWS * MATRIX_COLS;
+}
+
+uint16_t fn_actions_count(void) {
+  return sizeof(fn_actions) / sizeof(fn_actions[0]);
+}
+

@@ -1,8 +1,6 @@
 #include <avr/pgmspace.h>
 #include "ledmap.h"
-#include "debug.h"
 
-#ifdef LEDMAP_ENABLE
 
 static const uint16_t ledmaps[LED_COUNT] PROGMEM = {
     [0] = LEDMAP_CAPS_LOCK,                     // CapsLock         - PC7
@@ -49,5 +47,3 @@ void ledmap_led_off(uint8_t index)
             break;
     }
 }
-
-#endif

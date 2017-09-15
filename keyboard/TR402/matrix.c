@@ -9,9 +9,6 @@
 #include "debug.h"
 #include "util.h"
 #include "matrix.h"
-#ifdef PS2_MOUSE_ENABLE
-#include "ps2.h"
-#endif
 
 
 #ifndef DEBOUNCE
