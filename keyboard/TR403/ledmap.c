@@ -3,8 +3,8 @@
 
 
 static const uint16_t ledmaps[LED_COUNT] PROGMEM = {
-    [0] = LEDMAP_CAPS_LOCK,                     // CapsLock         - PC7
-    [1] = LEDMAP_BACKLIGHT,                     // LED      - GPIO0 - PB7
+  [0] = LEDMAP_BACKLIGHT,                     // LED      - GPIO0 - PB7
+  [1] = LEDMAP_CAPS_LOCK,                     // CapsLock         - PC7
 };
 
 ledmap_t ledmap_get_code(uint8_t index)
@@ -13,25 +13,25 @@ ledmap_t ledmap_get_code(uint8_t index)
 }
 
 /* LED pin configration
+ *   LED:       PB7
  *   CapsLock:  PC7
- *   LED:       PB6
  */
 void ledmap_led_init(void)
 {
-    DDRC  &= (1<<PC7);
-    PORTC &= (1<<PC7);
-    DDRB  &= (1<<PB7);
-    PORTB &= (1<<PB7);
+    DDRC  |= (1<<PC7);
+    PORTC |= (1<<PC7);
+    DDRB  |= (1<<PB7);
+    PORTB |= (1<<PB7);
 }
 
 void ledmap_led_on(uint8_t index)
 {
     switch (index) {
         case 0:
-            PORTC |= ~(1<<PC7);
+            PORTB &= ~(1<<PB7);
             break;
         case 1:
-            PORTB |= ~(1<<PB7);
+            PORTC &= ~(1<<PC7);
             break;
     }
 }
@@ -40,10 +40,10 @@ void ledmap_led_off(uint8_t index)
 {
     switch (index) {
         case 0:
-            PORTC &= (1<<PC7);
+            PORTB |= (1<<PB7);
             break;
         case 1:
-            PORTB &= (1<<PB7);
+            PORTC |= (1<<PC7);
             break;
     }
 }
